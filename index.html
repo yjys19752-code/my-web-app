@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo List</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <h1>📋 待办事项</h1>
+            <p class="subtitle" id="dateDisplay"></p>
+        </header>
+
+        <!-- Add Todo -->
+        <div class="add-todo">
+            <input type="text" id="todoInput" placeholder="添加新任务..." autofocus />
+            <button id="addBtn" title="添加">添加</button>
+        </div>
+
+        <!-- Filter & Stats -->
+        <div class="toolbar">
+            <div class="filter-group">
+                <button class="filter-btn active" data-filter="all">全部</button>
+                <button class="filter-btn" data-filter="active">待办</button>
+                <button class="filter-btn" data-filter="completed">已完成</button>
+            </div>
+            <span class="stats" id="stats">0 项</span>
+        </div>
+
+        <!-- Todo List -->
+        <ul class="todo-list" id="todoList">
+            <!-- dynamically rendered -->
+        </ul>
+
+        <!-- Empty State -->
+        <div class="empty-state" id="emptyState">
+            <div class="empty-icon">📌</div>
+            <p>暂无任务</p>
+            <span>添加一个新任务开始吧</span>
+        </div>
+
+        <!-- Clear Completed -->
+        <div class="footer-actions" id="footerActions">
+            <button id="clearCompletedBtn" class="clear-btn">🗑️ 清除已完成</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
